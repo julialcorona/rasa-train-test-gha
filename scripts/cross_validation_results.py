@@ -47,6 +47,8 @@ def entity_table():
             data = json.loads(f.read())
     except FileNotFoundError:
         print("File not accessible.")
+    print(f"{result_dir}/DIETClassifier_report.json")
+    print("data is {}".format(data))
 
     cols = ["support", "f1-score", "precision", "recall"]
     writer.headers = ["entity"] + cols
